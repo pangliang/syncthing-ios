@@ -1,0 +1,7 @@
+[submodule "golang"]
+	path = golang
+	url = https://github.com/golang/go.git
+	branch = release-branch.go1.7
+[submodule "syncthing"]
+	path = syncthing/src/github.com/syncthing/syncthing
+	url = https://github.com/syncthing/syncthing.git
