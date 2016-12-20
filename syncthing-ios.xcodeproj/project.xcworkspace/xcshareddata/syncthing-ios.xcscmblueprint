@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C1490BA0E95E8D783F999CC23C260E9948FB54E7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C1490BA0E95E8D783F999CC23C260E9948FB54E7" : 9223372036854775807,
+    "A589366B4A111B050B29F9A91523DDDA3B4C4CD7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9D280E5A-EA89-4EEF-82EF-C4C033ECC888",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C1490BA0E95E8D783F999CC23C260E9948FB54E7" : "syncthing-ios\/",
+    "A589366B4A111B050B29F9A91523DDDA3B4C4CD7" : "syncthing-ios\/syncthing\/src\/github.com\/syncthing\/syncthing\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "syncthing-ios",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "syncthing-ios.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pangliang\/syncthing.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A589366B4A111B050B29F9A91523DDDA3B4C4CD7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pangliang\/syncthing-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C1490BA0E95E8D783F999CC23C260E9948FB54E7"
+    }
+  ]
+}

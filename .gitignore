@@ -4,3 +4,5 @@ DerivedData
 syncthing-ios.xcodeproj/xcuserdata/liangwei.xcuserdatad
 syncthing-exc
 syncthing.a
+syncthing/pkg
+syncthing/bin

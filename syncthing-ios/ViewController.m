@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "_cgo_export.h"
+#import "syncthing.h"
 
 @interface ViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -32,7 +32,7 @@
 - (void)startSyncthing {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"--------Run Service------------");
-        WebServer();
+        StartSyncthing();
     });
 }
 
