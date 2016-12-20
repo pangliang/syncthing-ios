@@ -5,6 +5,11 @@
 /* Start of preamble from import "C" comments.  */
 
 
+#line 55 "/Volumes/d/syncthing-ios/syncthing/src/github.com/syncthing/syncthing/cmd/syncthing/main.go"
+
+
+extern void reloadWebView();
+
 
 
 /* End of preamble from import "C" comments.  */

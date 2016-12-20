@@ -9,8 +9,17 @@
 #import "ViewController.h"
 #import "syncthing.h"
 
+static ViewController* viewController;
+
+void reloadWebView(){
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"--------Run Service------------");
+        [viewController reloadWebView];
+    });
+}
+
 @interface ViewController () <UIWebViewDelegate>
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
 @end
 
 @implementation ViewController
@@ -19,18 +28,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    viewController = self;
     [self startSyncthing];
-    
-    [self reloadWebView];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"-----------webViewDidStartLoad");
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSLog(@"-----------didFailLoadWithError : %@", error.localizedDescription);
+    sleep(1);
     [self reloadWebView];
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"-----------webViewDidFinishLoad");
+}
+
 - (void)startSyncthing {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"--------Run Service------------");
         StartSyncthing();
     });
@@ -40,12 +57,7 @@
     NSLog(@"--------reloadWebView------------");
 
     self.webView.delegate = self;
-    [self loadRequestFromString:@"http://127.0.0.1:8384"];
-}
-
-- (void)loadRequestFromString:(NSString*)urlString
-{
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8384"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
 }
